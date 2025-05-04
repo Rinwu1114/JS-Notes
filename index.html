@@ -1,43 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="app.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <section class="menu">
-        <nav>
-            <div class="nav__row">
-                <div class="nav__title">
-                    JavaScript CrashCourse
-                </div>
-                <div class="nav__links">
-                    <a href="#Data Types & Variables" class="nav__link">Data Types & Variables</a>
-                    <a href="" class="nav__link">Conditionals</a>
-                    <a href="" class="nav__link">Loops</a>
-                    <a href="" class="nav__link">Functions</a>
-                    <a href="" class="nav__link">Arrays</a>
-                    <a href="" class="nav__link">Objects</a>
-                    <a href="" class="nav__link">DOM</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
+      <nav>
+        <div class="nav__row">
+          <div class="nav__title">JavaScript CrashCourse</div>
+          <div class="nav__links">
+            <a href="#DataTypes" class="nav__link">Data Types & Variables</a>
+            <a href="#Conditionals" class="nav__link">Conditionals</a>
+            <a href="#Loops" class="nav__link">Loops</a>
+            <a href="#Functions" class="nav__link">Functions</a>
+            <a href="#Arrays" class="nav__link">Arrays</a>
+            <a href="#Objects" class="nav__link">Objects</a>
+            <a href="#DOM" class="nav__link">DOM</a>
+          </div>
+        </div>
+      </nav>
     </section>
     <header>
+      <div class="container">
+        <div class="row">
+          <div class="header__description">
+            <h1 class="header__description--title">Why Learn Javascript</h1>
+            <h4 class="header__description--para">
+              JavaScript lets you build powerful site functions such as login
+              page, hamburger menu, paywall, condittionals and more. Average JS
+              developer makes about 125k/yr.
+            </h4>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="DataTypes">
         <div class="container">
-            <div class="row">
-                <div class="header__description">
-                    <h1 class="header__description--title">Why Learn Javascript</h1>
-                    <h4 class="header__description--para">JavaScript lets you build powerful site functions such as 
-                        login page, hamburger menu, paywall, condictionals and more. Average JS developer makes about 125k/yr.
-                    </h4>
+          <div class="row">
+            <h4 class="section__tag">Data Types & Variables</h4>
+            <h2 class="section__title">What are data types in JS?</h2>
+            <div class="section__para">
+              Data types helps in organization of data
+            </div>
+            <div class="examples">
+              <div class="example">
+                <div class="example__row">
+                  <div class="example__text">
+                    <div class="example__title">String</div>
+                    <div class="example__para">
+                      <ul>
+                        <li>
+                          If the word is inside quotations
+                          <span class="red">'example'</span> it is a
+                          <span class="purple">String.</span>
+                        </li>
+                        <li>
+                          Quotations can be
+                          <span class="red">"", '', or ``</span>.
+                        </li>
+                        <li>
+                          Strings can be
+                          <span class="red">ANY CAHRACTER</span> as long as it
+                          is inside quotations.
+                        </li>
+                        <li>"Hello World", '!@#2348?+-_', `😃😊👋🚶‍♀️🧙‍♂️`</li>
+                        <li>
+                          First index of a string starts with
+                          <span class="red">0</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="example">
+                <div class="example__row">
+                  <div class="example__text">
+                    <div class="example__title">Number</div>
+                    <div class="example__para">
+                      <ul>
+                        <li>Any real number</li>
+                        <li>123, 1.4, -57</li>
+                        <li>Can be used just like calculators</li>
+                        <li>
+                          Use % to find the remainder, used to find if the
+                          number is even or odd.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="example">
+                <div class="example__row">
+                  <div class="example__text">
+                    <div class="example__title">Boolean</div>
+                    <div class="example__para">
+                      <ul>
+                        <li>True</li>
+                        <li>False</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="example">
+                <div class="example__row">
+                  <div class="example__text">
+                    <div class="example__title">Undefined</div>
+                    <div class="example__para">
+                      <ul>
+                        <li>It means the value was not set / never existed</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="example">
+                <div class="example__row">
+                  <div class="example__text">
+                    <div class="example__title">Null</div>
+                    <div class="example__para">
+                      <ul>
+                        <li>It means nothing, literally means "nothing"</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="example">
+                <div class="example__row">
+                  <div class="example__text">
+                    <div class="example__title">NaN</div>
+                    <div class="example__para">
+                      <ul>
+                        <li>It means <span class="red">Not A Number</span></li>
+                        <li>
+                          Shows when there is an error when computing some
+                          number
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2 class="section__title">What are Variables used for?</h2>
+            <div class="section__para">Used to store data types.</div>
+            <div class="examples">
+              <div class="example">
+                <div class="example__row">
+                  <div class="example__text">
+                    <div class="example__title">var</div>
+                    <div class="example__para">
+                      <ul>
+                        <li>Outdated and rarely used</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="example">
+                <div class="example__row">
+                  <div class="example__text">
+                    <div class="example__title">let</div>
+                    <div class="example__para">
+                      <ul>
+                        <li>Can be used anywhere</li>
+                        <li>Variable set using let can be reassigned</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="example">
+                <div class="example__row">
+                  <div class="example__text">
+                    <div class="example__title">const</div>
+                    <div class="example__para">
+                      <ul>
+                        <li>Variables set using const can not be reassigned</li>
+                        <li>
+                          The const variable now can not be changed, it is
+                          always the same
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2 class="section__title">Equality</h2>
+            <div class="section__para">
+              Used to check if left and right of = is equal.
+            </div>
+            <div class="examples">
+                <div class="example">
+                  <div class="example__row">
+                    <div class="example__text">
+                      <div class="example__title">== and ===</div>
+                      <div class="example__para">
+                        <ul>
+                          <li>Double equal checks the values</li>
+                          <li>Triple equal checks teh values and types</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="example">
+                  <div class="example__row">
+                    <div class="example__text">
+                      <div class="example__title">!= and !===</div>
+                      <div class="example__para">
+                        <ul>
+                          <li>Used to change into NOT equals</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </div>
+          </div>
+
+          <section id="Conditionals">
+            <div class="container">
+              <div class="row"></div>
+            </div>
+          </section>
+          <section id="Loops">
+            <div class="container">
+              <div class="row">Loops</div>
+            </div>
+          </section>
+          <section id="Functions">
+            <div class="container">
+              <div class="row">Functions</div>
+            </div>
+          </section>
+          <section id="Arrays">
+            <div class="container">
+              <div class="row">Arrays</div>
+            </div>
+          </section>
+          <section id="Objects">
+            <div class="container">
+              <div class="row">Objects</div>
+            </div>
+          </section>
+          <section id="DOM">
+            <div class="container">
+              <div class="row">DOM</div>
+            </div>
+          </section>
         </div>
-    </header>
-</body>
+      </section>
+    </main>
+  </body>
 </html>
