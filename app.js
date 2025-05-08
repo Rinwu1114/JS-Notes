@@ -47,3 +47,77 @@ else{
  */
 
 
+/**
+ * Loops
+ */
+
+//DRY = DONT REPEAT YOURSELF
+let count = 1
+
+// while loop example
+
+/**while (count <= 100){
+    console.log(count)
+    count = count +1
+}
+    */
+
+//for loop 
+//for the while loop above
+
+for (let i = 0; i <= 3; i++ ){
+console.log(i)
+}
+
+/** Write a for-loop through 1 to 20
+ * If the number is divisible by 3, print Frontend
+ * If the number is divisible by 5, print simplified
+ * if the number is NOT divisible by either 3 or 5, print the number
+ * 
+ * example
+ * 1 -> 1
+ * 2 -> 2
+ * 3 -> Frontend
+ * 4 -> 4
+ * 5 -> Simplified
+ * ...
+ * 15 -> Frontend Simplified
+ * ...
+ * 20 -> Simplified
+ */
+
+
+for (let i = 1; i <= 20; i++ ){
+    if ((i % 5 === 0)&&(i % 3 === 0)){
+        console.log(`${i} -> Frontend Simplified`)
+    }
+    else if (
+        (i % 3) === 0){
+        console.log(`${i} -> Frontend`)
+    }
+    else if ((i % 5) === 0 ){
+        console.log(`${i} -> Simplified`)
+    } 
+    else {
+        console.log(`${i} -> ${i}`)
+    }
+    }
+
+    /**Print out every character from the string
+     * "Frontend Simplified"
+     * 
+     * example
+     * 'F'
+     * 'r'
+     * 'o'
+     * ...
+     * 'e'
+     * 'd'
+     */
+
+    const w = 'Frontend Simplified'
+    //console.log(w.length)
+     for (let y = 1; y < w.length ; ++y){
+       console.log(w[y])
+    }
+
