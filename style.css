@@ -175,3 +175,23 @@ Loops
     flex-direction: column;
     align-items: center;
 }
+
+/*
+Functions
+*/
+
+#Functions .row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*
+Arrays
+*/
+
+#Arrays .row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

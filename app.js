@@ -121,3 +121,72 @@ for (let i = 1; i <= 20; i++ ){
        console.log(w[y])
     }
 
+/**
+ * Functions
+ */
+
+//Function definition
+function welcomePersonToFES(firstName, lastName){
+    console.log(`Welcome to FES, ${firstName} ${lastName}`)
+
+}
+
+//Call the function
+welcomePersonToFES(`Rin`, `wu`)
+welcomePersonToFES(`j`, `o`)
+welcomePersonToFES(`wah`, `ter`)
+
+function sumOfTwoNumbers(num1, num2){
+    return num1 + num2
+}
+
+console.log(sumOfTwoNumbers(10,20))
+
+function convertCelsiusToFahrenheit (celsius){
+    return celsius * 1.8 + 32
+}
+
+console.log(convertCelsiusToFahrenheit(20))
+
+//Second way of making a function
+
+const convertFahrenheitToCelsius = (fahrenheit) => {
+    return (fahrenheit - 32) * 5/9
+}
+
+console.log (convertFahrenheitToCelsius(68))
+
+//Arrays 
+
+/**Instead of 
+ * let item1 = 20
+ * let item2 = 30
+ * let item3 = 40
+ * let item4 = 50
+ * let item5 = 100
+ */
+
+let arr = [20, 30, 40, 50, 100]
+
+//First element of array
+console.log(arr[0])
+//Last elemetn of array
+console.log(arr[arr.length - 1])
+
+//add elemets to end of arrays
+arr.push(200)
+
+let newArr = arr.filter((element) => {
+    console.log(element)
+    if (element < 50){
+        return true;
+    }
+})
+
+//^ long way
+// let newArr = arr.filter(element => {
+// return element < 50})
+//^ short way
+
+console.log(newArr)
+
