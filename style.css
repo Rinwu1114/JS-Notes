@@ -216,6 +216,19 @@ DOM
     align-items: center;
 }
 
+.example--DOM{
+    width: 100%;
+    align-items: center;
+}
+
+.example__para--DOM{
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 2;
+    max-width: 634px;
+    color: rgb(59, 86, 126);
+}
+
 .dark-theme{
     background-color: rgb(39, 39, 39);
     transition: all 300ms;

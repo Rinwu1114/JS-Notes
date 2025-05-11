@@ -330,7 +330,7 @@ document.querySelector("#DOMexample").innerHTML = `This is changed in JS`;
 // .innerHTML += 'content' ADDS typed content onto existing HTML
 
 //change CSS
-document.querySelector(`#DOMexample`).style.fontSize = `16px`;
+document.querySelector(`#DOMexample`).style.fontSize = `24px`;
 
 function ChangeDOMExampleToRed() {
   document.querySelector("#DOMexample").style.color = `red`;
