@@ -195,3 +195,33 @@ Arrays
     flex-direction: column;
     align-items: center;
 }
+
+/*
+Objects
+*/
+
+#Objects .row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*
+DOM
+*/
+
+#DOM .row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dark-theme{
+    background-color: rgb(39, 39, 39);
+    transition: all 300ms;
+}
+
+.dark-theme * {
+    color: #fff;
+    transition: all 300ms;
+}

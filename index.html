@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -401,12 +401,30 @@
       </section>
       <section id="Objects">
         <div class="container">
-          <div class="row">Objects</div>
+          <div class="row">
+            <h4 class="section__tag">Objects</h4>
+            <div class="section__title">What are Objects in Javascript?</div>
+            <div class="section__para">Objects are used to store multiple properties in one variable</div>
+          </div>
         </div>
       </section>
       <section id="DOM">
         <div class="container">
-          <div class="row">DOM</div>
+          <div class="row">
+            <h4 class="section__tag">DOM (Document Object Model)</h4>
+            <div class="section__title">What is the DOM</div>
+            <div class="section__para">DOM allows you to access and change the styling and conent of elements on your website</div>
+            <div class="examples">
+                <div class="example">
+                    <div class="example__text">
+                        <div class="example__title">JS can change stuff in HTML</div>
+                        <div id="DOMexample" class="example__para">Hello! change me in JS!</div>
+                        <button onclick ="ChangeDOMExampleToRed()" >Click Me</button>
+                        <button onclick="toggleDarkMode()">Dark Mode</button>
+                    </div>
+                </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
