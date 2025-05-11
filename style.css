@@ -225,3 +225,13 @@ DOM
     color: #fff;
     transition: all 300ms;
 }
+
+/*
+Promises
+*/
+
+#Promises .row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

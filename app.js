@@ -300,42 +300,114 @@ login(`wrong@gmail.com`, `test321`);
  * 2. Push this user object onto the users array
  */
 
-function register(user){
-    users.push(user);
+function register(user) {
+  users.push(user);
 }
 
 register({
-  username:`ericusername`,
-  email:`eric@gmail.com`,
-  password:`password`,
-  subStatus:`VIP`,
-  discordID:`eric#0001`,
-  lessonsCompleted:[0, 1]
+  username: `ericusername`,
+  email: `eric@gmail.com`,
+  password: `password`,
+  subStatus: `VIP`,
+  discordID: `eric#0001`,
+  lessonsCompleted: [0, 1],
 });
 
-console.log(users)
+console.log(users);
 
 //DOM
 
 //Change HTML
 //first way of accessing an element
-console.log(document.querySelector(`#DOMexample`))
+console.log(document.querySelector(`#DOMexample`));
 //^^^^ most used!! class use a . ID use a #
 //secodn way of accessing an element
-console.log(document.getElementById(`DOMexample`))
+console.log(document.getElementById(`DOMexample`));
 // better practice if you have an ID
 
-document.querySelector('#DOMexample').innerHTML = `This is changed in JS`
+document.querySelector("#DOMexample").innerHTML = `This is changed in JS`;
 // .innerHTML = 'content' replaces the inner content you are accessing
 // .innerHTML += 'content' ADDS typed content onto existing HTML
 
 //change CSS
-document.querySelector(`#DOMexample`).style.fontSize = `16px`
+document.querySelector(`#DOMexample`).style.fontSize = `16px`;
 
-function ChangeDOMExampleToRed(){
-    document.querySelector('#DOMexample').style.color = `red`
+function ChangeDOMExampleToRed() {
+  document.querySelector("#DOMexample").style.color = `red`;
 }
 
-function toggleDarkMode(){
-    document.querySelector(`body`).classList.toggle("dark-theme")
+function toggleDarkMode() {
+  document.querySelector(`body`).classList.toggle("dark-theme");
 }
+
+//Promises
+//Useing backend data
+//fetch(`https://jsonplaceholder.typicode.com/users/1`)
+
+//To unlock the promise data
+//1. Then
+// fetch(`https://jsonplaceholder.typicode.com/users/1`)
+//   .then((response) => {
+//     return response.json();
+//   })
+//   .then((data) => {
+//     emailRef.innerHTML = data.email;
+//   });
+
+// //.json is a promise in of itself
+const emailRef = document.querySelector(`.email`);
+// console.log(emailRef);
+
+//2. Async/Await
+async function main(){
+    const response = await fetch('https://jsonplaceholder.typicode.com/users/1')
+    const data = await response.json()
+    console.log(data)
+    emailRef.innerHTML = data.email
+}
+main() 
+
+//making it dynamic
+const statusRef = document.querySelector(`.status`)
+const videoRef = document.querySelector(`.video`)
+
+//creating promises (mock backend)
+
+function getSubscriptionStatus (){
+    return new Promise ((resolve, reject)=>{
+        setTimeout(() =>{
+            resolve(`None`)
+        }, 2000)
+    })
+}
+
+function getVideo(subscriptionStatus){
+    return new Promise ((resolve, reject) =>{
+        if (subscriptionStatus === `VIP`){
+            resolve(`Show Video`)
+        }
+        else if (subscriptionStatus === `FREE`){
+            resolve(`Show Trailer`)
+        }
+        else{
+            reject(` No Video`)
+        }
+    })
+}
+
+//taking data out of the backend
+//and using it on the frontend
+
+async function sub () {
+    const status = await getSubscriptionStatus()
+    statusRef.innerHTML = status
+    try{
+    console.log(await getVideo(status))
+    }
+    catch(e){
+        console.log(e)
+        videoRef.innerHTML = e
+    }
+}
+
+sub()
